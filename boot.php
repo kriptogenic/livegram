@@ -3,6 +3,11 @@ declare(strict_types=1);
 
 use DI\ContainerBuilder;
 
+if(getenv('DEBUG') === 'true') {
+    error_reporting(-1);
+    ini_set('display_errors', 'On');
+}
+
 define('APP_DIR', __DIR__ . '/');
 require APP_DIR . 'vendor/autoload.php';
 
