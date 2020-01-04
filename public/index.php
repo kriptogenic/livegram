@@ -15,4 +15,5 @@ $bot->hears('\/start.*', StartHandler::class);
 /*
  * @TODO webhook
  */
-$bot->run();
+$update = new \Zetgram\Types\Update(getRequestBody());
+$bot->handleUpdate($update);
