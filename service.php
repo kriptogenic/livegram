@@ -17,7 +17,7 @@ return [
     Api::class => autowire()
         ->constructorParameter('token', getenv('BOT_TOKEN')),
     TranslatorContract::class => function(ContainerInterface $container) {
-        $loader = new YamlFileLoader(new Filesystem(), APP_DIR . '/translations', 'resources/lang');
+        $loader = new YamlFileLoader(new Filesystem(), APP_DIR . '/translations', '/cache');
         return new Translator($loader, 'uz');
     },
 ];

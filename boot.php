@@ -5,7 +5,6 @@ use DI\ContainerBuilder;
 
 if(getenv('DEBUG') === 'true') {
     error_reporting(E_ALL );
-
 }
 
 define('APP_DIR', __DIR__ . '/');
