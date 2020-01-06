@@ -11,9 +11,8 @@ require __DIR__ . '/../boot.php';
  */
 $bot = $container->get(Bot::class);
 
-$bot->hears('\/start.*', StartHandler::class);
-/*
- * @TODO webhook
- */
+include APP_DIR . 'routes.php';
+
+
 $update = new \Zetgram\Types\Update(getRequestBody());
 $bot->handleUpdate($update);
